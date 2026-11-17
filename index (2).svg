@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     width="1440" height="900" viewBox="0 0 1440 900"
+     preserveAspectRatio="none"
+     style="width:100vw;height:100vh;display:block;background:#000">
+  <title>Workspace</title>
+  <desc>SVG wrapper that opens the original interactive Workspace application.</desc>
+
+  <!-- Fallback for SVG viewers that do not support embedded HTML. -->
+  <rect x="0" y="0" width="1440" height="900" fill="#000"/>
+  <text x="720" y="450" fill="#fff" font-family="sans-serif"
+        font-size="22" text-anchor="middle">
+    Open index (3).html in a modern web browser to use this workspace.
+  </text>
+
+  <!--
+    Keep index (3).html and its ./assets/ directory alongside this SVG.
+    The iframe runs the original app instead of replacing its behavior with
+    a static vector drawing.
+  -->
+  <foreignObject x="0" y="0" width="1440" height="900">
+    <xhtml:div style="width:100%;height:100%;margin:0;padding:0;overflow:hidden">
+      <xhtml:iframe
+        src="./index%20(3).html"
+        title="Workspace application"
+        style="display:block;width:100%;height:100%;border:0;margin:0;padding:0;background:#000"
+        allow="fullscreen; autoplay; clipboard-read; clipboard-write">
+      </xhtml:iframe>
+    </xhtml:div>
+  </foreignObject>
+</svg>
